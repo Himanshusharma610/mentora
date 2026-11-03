@@ -3,8 +3,16 @@
   "version": "1.0.0",
   "description": "Comprehensive College Mentor-Mentee Enterprise Management System",
   "scripts": {
-    "dev:server": "node server/server.js",
-    "dev:client": "npm --prefix client run dev"
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "dev:backend": "node backend/server.js",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:server": "node backend/server.js",
+    "dev:client": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "lint": "npm --prefix frontend run lint",
+    "migrate": "node backend/migrate-complete.js",
+    "test:activation": "node backend/test_student_activation_flow.js"
   },
   "engines": {
     "node": ">=18.0.0"
